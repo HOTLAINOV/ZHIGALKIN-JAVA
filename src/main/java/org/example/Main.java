@@ -4,28 +4,18 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        // Заданный массив целых чисел
+        int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
-        System.out.println("Введите первое число:");
-        int a = scanner.nextInt();
-        System.out.println("Введите второе число:");
-        int b = scanner.nextInt();
+        System.out.println("Чётные числа:");
 
-        if (a > b) {
-            System.out.println("a > b");
-        } else if (a < b) {
-            System.out.println("a < b");
-        } else {
-            System.out.println("a = b");
-        }
-
-        System.out.println("Сумма: " + (a + b));
-        System.out.println("Разность: " + (a - b));
-        System.out.println("Произведение: " + (a * b));
-        if (b != 0) {
-            System.out.println("Деление: " + ((double) a / b));
-        } else {
-            System.out.println("Деление на ноль невозможно");
+        // Перебор элементов массива
+        for (int number : numbers) {
+            // Проверка, является ли число чётным
+            if (number % 2 == 0) {
+                // Вывод чётного числа в консоль
+                System.out.println(number);
+            }
         }
     }
 }
