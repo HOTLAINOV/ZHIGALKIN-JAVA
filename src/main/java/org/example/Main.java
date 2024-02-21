@@ -6,26 +6,17 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Введите первое число:");
-        int a = scanner.nextInt();
-        System.out.println("Введите второе число:");
-        int b = scanner.nextInt();
+        // Ввод двух строк с клавиатуры
+        System.out.println("Введите первую строку:");
+        String a = scanner.nextLine();
+        System.out.println("Введите вторую строку:");
+        String b = scanner.nextLine();
 
-        if (a > b) {
-            System.out.println("a > b");
-        } else if (a < b) {
-            System.out.println("a < b");
+        // Сравнение строк и вывод результата в консоль
+        if (a.equals(b)) {
+            System.out.println("Строки идентичны");
         } else {
-            System.out.println("a = b");
-        }
-
-        System.out.println("Сумма: " + (a + b));
-        System.out.println("Разность: " + (a - b));
-        System.out.println("Произведение: " + (a * b));
-        if (b != 0) {
-            System.out.println("Деление: " + ((double) a / b));
-        } else {
-            System.out.println("Деление на ноль невозможно");
+            System.out.println("Строки неидентичны");
         }
     }
 }
